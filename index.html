@@ -508,15 +508,48 @@ nav a:hover {
   height: 100%;
 }
 
+
+/* OUTLINR — Mobile layout improvements */
 @media (max-width: 600px) {
-  .outlintr-vector {
-    width: 72px;
-    height: 72px;
-    top: 12px;
-    right: 4%;
-    left: auto;
+  /* Prevent accidental horizontal scrolling */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Keep the hero image and text comfortable on phones */
+  .hero {
+    min-height: 580px;
+    height: 78svh;
+    max-height: 760px;
+  }
+
+  .hero-content {
+    padding: 0 6% 36px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    line-height: 0.95;
+  }
+
+  .hero-description {
+    max-width: 34ch;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .hero-bottom .cta {
+    min-height: 44px;
+    align-items: center;
+  }
+
+  /* Make product images fit their cards */
+  .product-card img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
 
   </style>
 </head>
