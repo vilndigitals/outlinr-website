@@ -487,7 +487,33 @@ nav a:hover {
     transition: none;
   }
 }
+ /* OUTLINR geometric vector accent */
+.outlintr-vector {
+  position: absolute;
+  top: 20px;
+  right: 5%;
+  width: 110px;
+  height: 110px;
+  color: #e34343;
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 10;
+}
 
+.outlintr-vector svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .outlintr-vector {
+    width: 72px;
+    height: 72px;
+    top: 12px;
+    right: 4%;
+  }
+}
   </style>
 </head>
 
