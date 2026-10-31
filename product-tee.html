@@ -11,7 +11,7 @@ header{height:72px;padding:0 7%;display:flex;align-items:center;justify-content:
 nav{display:flex;justify-content:center;gap:28px;padding:22px 12px;border-bottom:1px solid #303030;flex-wrap:wrap}nav a{font-size:11px;letter-spacing:1.5px;color:#c9c4bb;text-transform:uppercase}nav a:hover{color:white}
 .collection{padding:58px 7% 20px;max-width:1440px;margin:auto}.collection-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px;gap:15px}.collection h2{font:600 clamp(27px,4vw,40px) 'Space Grotesk';letter-spacing:-1.5px}.collection-head p{color:#a8a198;font-size:12px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
 .card{min-width:0}.photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#242424}.info{padding:14px 0 28px}.name{font:600 16px 'Space Grotesk';margin-bottom:6px}.price{font-size:13px;color:#d0c9bf;margin-bottom:13px}.controls{display:grid;grid-template-columns:1fr 75px;gap:8px;margin-bottom:9px}.controls select{min-width:0;background:#1c1c1c;color:#f4f0e8;border:1px solid #454545;padding:11px 8px;font:12px 'DM Sans';border-radius:0}.order{width:100%;border:0;background:#f4f0e8;color:#111;padding:13px 10px;font-size:10px;font-weight:700;letter-spacing:1.3px;cursor:pointer}.order:hover{background:#d4ccc0}.footnote{font-size:10px;color:#8f8b84;margin-top:9px}
-footer{text-align:center;padding:32px 15px;border-top:1px solid #303030;color:#8f8b84;font-size:10px;letter-spacing:2px;margin-top:50px}
+.top-button{position:fixed;right:22px;bottom:22px;z-index:10;background:#f4f0e8;color:#111;border:0;padding:13px 16px;font:700 10px 'DM Sans';letter-spacing:1.2px;cursor:pointer;box-shadow:0 4px 18px #0008;opacity:0;visibility:hidden;transform:translateY(8px);transition:.25s}.top-button.show{opacity:1;visibility:visible;transform:translateY(0)}.top-button:hover{background:#d4ccc0}footer{text-align:center;padding:32px 15px;border-top:1px solid #303030;color:#8f8b84;font-size:10px;letter-spacing:2px;margin-top:50px}
 @media(max-width:950px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){header{height:64px;padding:0 5%}.hero{padding:60px 5% 42px}.hero h1{letter-spacing:-2px}.collection{padding:42px 5% 5px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.collection-head{display:block}.collection-head p{margin-top:7px}.controls{grid-template-columns:1fr 62px}.photo{aspect-ratio:3/4}}@media(max-width:360px){.grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -20,8 +20,12 @@ footer{text-align:center;padding:32px 15px;border-top:1px solid #303030;color:#8
 <section class="hero"><p class="eyebrow">OUTLINR / COLLECTION 001</p><h1>THE TEE<br>COLLECTION</h1><p>YOU WEAR IT. YOU DEFINE IT.</p></section>
 <nav><a href="#cursive">Cursive</a><a href="#motion">Can't Stop My Motion</a><a href="#cool">Cool</a></nav>
 <div id="collections"></div>
+<button class="top-button" id="backToTop" type="button" aria-label="Back to top">↑ BACK TO TOP</button>
 <footer>OUTLINR © 2026 — DARE TO DIFFER.</footer>
 <script>
+const topButton=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>topButton.classList.toggle('show',window.scrollY>450));
+topButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 const collections=[
 { id:'cursive',title:'CURSIVE',sub:'A statement in every line.',files:[
 'cursive/outlinr b&w.jpg','cursive/outlinr  b&gr.jpg','cursive/outlinr bl & red .jpg','cursive/outlinr bl&pi.jpg','cursive/outlinr blackandblue (1).jpg','cursive/outlinr w&p.jpg','cursive/outlinr wh & bl .jpg','cursive/outlinr wh &bl .jpg','cursive/outlinr wh&gr .jpg','cursive/outlinr wh&re.jpg']},
