@@ -1,199 +1,56 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#111111">
-  <title>Oversized Tee | OUTLINR</title>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background: #111;
-      color: #f4f0e8;
-      font-family: 'DM Sans', sans-serif;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    header {
-      height: 76px;
-      padding: 0 7%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid #303030;
-    }
-
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 25px;
-      font-weight: 700;
-      letter-spacing: -1.5px;
-    }
-
-    .back {
-      color: #c9c4bb;
-      font-size: 13px;
-    }
-
-    main {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 7%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .product-image {
-      width: 100%;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      background: #252525;
-      display: block;
-    }
-
-    .eyebrow {
-      color: #b9b0a3;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-    }
-
-    h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(38px, 5vw, 64px);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 20px;
-    }
-
-    .price {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
-
-    .description {
-      color: #c4c0b9;
-      font-size: 14px;
-      line-height: 1.9;
-      margin-bottom: 25px;
-    }
-
-    .details {
-      border-top: 1px solid #363636;
-      border-bottom: 1px solid #363636;
-      padding: 18px 0;
-      margin-bottom: 28px;
-      font-size: 13px;
-      line-height: 2;
-      color: #c4c0b9;
-    }
-
-    .details strong {
-      color: #f4f0e8;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      text-align: center;
-      padding: 17px;
-      background: #f4f0e8;
-      color: #111;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-    }
-
-    .button:hover {
-      background: #d7d0c4;
-    }
-
-    .note {
-      color: #8f8b84;
-      font-size: 11px;
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      border-top: 1px solid #303030;
-      color: #8f8b84;
-      font-size: 11px;
-      letter-spacing: 2px;
-    }
-
-    @media (max-width: 700px) {
-      header {
-        height: 65px;
-      }
-
-      main {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        padding: 30px 6%;
-      }
-
-      h1 {
-        font-size: 44px;
-      }
-    }
-  </style>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#111">
+<title>OUTLINR — Tee Collection</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#111;color:#f4f0e8;font-family:'DM Sans',sans-serif}a{color:inherit;text-decoration:none}
+header{height:72px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #303030;position:sticky;top:0;background:#111;z-index:5}.logo{font:700 25px 'Space Grotesk';letter-spacing:-1.5px}.back{font-size:12px;color:#c9c4bb}
+.hero{padding:76px 7% 55px;text-align:center;border-bottom:1px solid #303030}.eyebrow{font-size:10px;letter-spacing:4px;color:#aaa196;text-transform:uppercase;margin-bottom:18px}.hero h1{font:700 clamp(42px,8vw,86px)/.95 'Space Grotesk';letter-spacing:-4px}.hero p:last-child{color:#bdb7ae;font-size:13px;margin-top:20px;letter-spacing:1px}
+nav{display:flex;justify-content:center;gap:28px;padding:22px 12px;border-bottom:1px solid #303030;flex-wrap:wrap}nav a{font-size:11px;letter-spacing:1.5px;color:#c9c4bb;text-transform:uppercase}nav a:hover{color:white}
+.collection{padding:58px 7% 20px;max-width:1440px;margin:auto}.collection-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:25px;gap:15px}.collection h2{font:600 clamp(27px,4vw,40px) 'Space Grotesk';letter-spacing:-1.5px}.collection-head p{color:#a8a198;font-size:12px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.card{min-width:0}.photo{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#242424}.info{padding:14px 0 28px}.name{font:600 16px 'Space Grotesk';margin-bottom:6px}.price{font-size:13px;color:#d0c9bf;margin-bottom:13px}.controls{display:grid;grid-template-columns:1fr 75px;gap:8px;margin-bottom:9px}.controls select{min-width:0;background:#1c1c1c;color:#f4f0e8;border:1px solid #454545;padding:11px 8px;font:12px 'DM Sans';border-radius:0}.order{width:100%;border:0;background:#f4f0e8;color:#111;padding:13px 10px;font-size:10px;font-weight:700;letter-spacing:1.3px;cursor:pointer}.order:hover{background:#d4ccc0}.footnote{font-size:10px;color:#8f8b84;margin-top:9px}
+footer{text-align:center;padding:32px 15px;border-top:1px solid #303030;color:#8f8b84;font-size:10px;letter-spacing:2px;margin-top:50px}
+@media(max-width:950px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:650px){header{height:64px;padding:0 5%}.hero{padding:60px 5% 42px}.hero h1{letter-spacing:-2px}.collection{padding:42px 5% 5px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.collection-head{display:block}.collection-head p{margin-top:7px}.controls{grid-template-columns:1fr 62px}.photo{aspect-ratio:3/4}}@media(max-width:360px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
-
 <body>
-  <header>
-    <a class="logo" href="index.html">OUTLINR.</a>
-    <a class="back" href="index.html">← BACK TO SHOP</a>
-  </header>
-
-  <main>
-    <div>
-      <img
-        class="product-image"
-        src="outlinr-campaign.jpg"
-        alt="OUTLINR streetwear campaign">
-    </div>
-
-    <section>
-      <p class="eyebrow">OUTLINR — Collection 001</p>
-      <h1>OVERSIZED<br>TEE</h1>
-      <p class="price">Price coming soon</p>
-
-      <p class="description">
-        Made for those who define themselves. The OUTLINR Oversized Tee
-        brings everyday comfort together with a clean streetwear identity.
-        Wear it your way. Define your own outline.
-      </p>
-
-      <div class="details">
-        <p><strong>Fit:</strong> Oversized</p>
-        <p><strong>Style:</strong> Minimal streetwear</p>
-        <p><strong>Availability:</strong> Coming soon</p>
-      </div>
-
-      <a class="button" href="index.html">BACK TO COLLECTION</a>
-      <p class="note">YOU WEAR IT. YOU DEFINE IT.</p>
-    </section>
-  </main>
-
-  <footer>OUTLINR © 2026 — DARE TO DIFFER.</footer>
-</body>
-</html>
+<header><a class="logo" href="index.html">OUTLINR.</a><a class="back" href="index.html">← BACK TO SHOP</a></header>
+<section class="hero"><p class="eyebrow">OUTLINR / COLLECTION 001</p><h1>THE TEE<br>COLLECTION</h1><p>YOU WEAR IT. YOU DEFINE IT.</p></section>
+<nav><a href="#cursive">Cursive</a><a href="#motion">Can't Stop My Motion</a><a href="#cool">Cool</a></nav>
+<div id="collections"></div>
+<footer>OUTLINR © 2026 — DARE TO DIFFER.</footer>
+<script>
+const collections=[
+{ id:'cursive',title:'CURSIVE',sub:'A statement in every line.',files:[
+'cursive/outlinr b&w.jpg','cursive/outlinr  b&gr.jpg','cursive/outlinr bl & red .jpg','cursive/outlinr bl&pi.jpg','cursive/outlinr blackandblue (1).jpg','cursive/outlinr w&p.jpg','cursive/outlinr wh & bl .jpg','cursive/outlinr wh &bl .jpg','cursive/outlinr wh&gr .jpg','cursive/outlinr wh&re.jpg']},
+{ id:'motion',title:"CAN’T STOP MY MOTION",sub:'Made to move. Impossible to ignore.',files:[
+'motion tees/outlinr  motion w&p .jpg','motion tees/outlinr motion w & r.jpg','motion tees/outlinr motion w&bl .jpg','motion tees/outlinr motion w&bl 2.jpg','motion tees/outlinr motion w&camo  (2).jpg','motion tees/outlinr motion w&camo .jpg','motion tees/outlinr motion w&g .jpg','motion tees/outlinr motion w&g 2.jpg','motion tees/outlinr motion w&p 2.jpg','motion tees/outlinr motion w&r 2.jpg']},
+{ id:'cool',title:'COOL',sub:'Quiet confidence. Distinct identity.',files:[
+'cool/outlinr cool b& gr.jpg','cool/outlinr cool wh&gr.jpg']}
+];
+const money='₦20,000',phone='2349137447594';
+const root=document.getElementById('collections');
+collections.forEach(group=>{
+ const section=document.createElement('section');section.className='collection';section.id=group.id;
+ section.innerHTML='<div class="collection-head"><div><p class="eyebrow">THE OUTLINR SERIES</p><h2>'+group.title+'</h2></div><p>'+group.sub+'</p></div><div class="grid"></div>';
+ const grid=section.querySelector('.grid');
+ group.files.forEach((file,index)=>{
+  const card=document.createElement('article');card.className='card';
+  const image=document.createElement('img');image.className='photo';image.loading='lazy';image.alt=group.title+' colourway '+(index+1);image.src=file.split('/').map(encodeURIComponent).join('/');
+  const info=document.createElement('div');info.className='info';
+  const name=group.id==='motion'?'CAN’T STOP MY MOTION':group.title+' TEE';
+  info.innerHTML='<h3 class="name">'+name+'</h3><p class="price">'+money+'</p><div class="controls"><select aria-label="Select size"><option value="">Select size</option><option>XS</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select><select aria-label="Quantity"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><button class="order">ORDER ON WHATSAPP</button><p class="footnote">Colourway '+(index+1)+' · Oversized fit</p>';
+  info.querySelector('button').addEventListener('click',()=>{
+   const size=info.querySelectorAll('select')[0].value,qty=info.querySelectorAll('select')[1].value;
+   if(!size){alert('Please select a size first.');return}
+   const message='Hello OUTLINR, I want to order: '+name+' | Colourway: '+(index+1)+' | Size: '+size+' | Quantity: '+qty+' | Price: '+money+' | Image: '+location.origin+'/'+file.split('/').map(encodeURIComponent).join('/');
+   window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(message),'_blank');
+  });
+  card.append(image,info);grid.append(card);
+ });
+ root.append(section);
+});
+</script>
+</body></html>
